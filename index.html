@@ -1,1 +1,138 @@
-hello world
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prodikl - Prodikl</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,900,200|Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link href="/style.css" type="text/css" rel="stylesheet" />
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/b443db8118.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var $active = null;
+
+        $(document).ready(function(){
+            $(".item").click(function(e){
+                if($(e.target).is("a") || $(e.target).is("img")){
+                    return;
+                }
+                $active = $(this).find('.details');
+                $active.toggleClass("open");
+
+                if($active.hasClass("open")){
+                    $("#shade").show();
+                } else {
+                    $("#shade").hide();
+                    $active = null;
+                }
+            });
+            $("#shade").click(function(){
+                $active.toggleClass("open");
+                $active = null;
+                $("#shade").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div>
+    <div id="shade"></div>
+    <section id="top" class="center">
+        <h3><a href="/">PRODIKL</a></h3>
+    </section>
+    <section class="type">
+        <h1>Software</h1>
+        <div class="items">
+            <div class="item">
+                <div class="details">
+                    <h1>Subtitle Scanner</h1>
+                    <div class="details-box">
+                        <img src="images/software/sub1-thumb.jpg"/>
+                        <p>Organize and match subtitle files.
+                            Copies subtitle files from directories and copies the video file names.</p>
+                        <a class="button" href="/software/subtitleScanner">VIEW MORE</a>
+                    </div>
+                    <div class="tags"><i class="fab fa-windows"></i></div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="details">
+                    <h1>Name Generator</h1>
+                    <div class="details-box">
+                        <p>Generate various names by replacing vowels or consonants.</p>
+                        <a class="button" href="/namegenerator">VIEW MORE</a>
+                    </div>
+                    <div class="tags"><i class="fab fa-chrome"></i></div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="details">
+                    <h1>Digress</h1>
+                    <div class="details-box">
+                        <p>Debate completely with sub debates on sub debates.</p>
+                        <a class="button" href="http://digress.app">VIEW MORE</a>
+                    </div>
+                    <div class="tags"><i class="fab fa-chrome"></i></div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="details">
+                    <h1>Read Korean</h1>
+                    <div class="details-box">
+                        <a href="https://play.google.com/store/apps/details?id=air.com.prodikl.ReadKorean" target="_blank">                            <img src="/site-images/readkorean.jpg"/><br/>                          </a>                          <a class="button"  href="https://play.google.com/store/apps/details?id=air.com.prodikl.ReadKorean"
+                                                                                                                                                                                                                                                               target="_blank">Visit Site</a>                        <a class="button"  href="/readkorean" class="visit-site"
+                                                                                                                                                                                                                                                                                                                        target="_blank">Privacy Policy</a>                        </div>
+                    <div class="tags"><i class="fab fa-android"></i></div>                    </div>
+            </div>
+            <div class="item">
+                <div class="details">
+                    <h1>Read Chinese</h1>
+                    <div class="details-box">
+                        <a href="https://play.google.com/store/apps/details?id=com.prodikl.readchinese" target="_blank">                            <img src="/site-images/readchinese.jpg"/><br/>                          </a>                          <a class="button"  href="https://play.google.com/store/apps/details?id=com.prodikl.readchinese"
+                                                                                                                                                                                                                                                             target="_blank">Visit Site</a>                                                </div>
+                    <div class="tags"><i class="fab fa-android"></i></div>                    </div>
+            </div>
+            <div class="item">
+                <div class="details">
+                    <h1>Investor</h1>
+                    <div class="details-box">
+                        <a href="https://play.google.com/store/apps/details?id=com.prodikl.investor" target="_blank">                            <img src="/site-images/investor.jpg"/><br/>                          </a>                          <a class="button"  href="https://play.google.com/store/apps/details?id=com.prodikl.investor"
+                                                                                                                                                                                                                                                       target="_blank">Visit Site</a>                                                </div>
+                    <div class="tags"><i class="fab fa-android"></i></div>                    </div>
+            </div>
+            <div class="item">
+                <div class="details">
+                    <h1>Track SEPTA</h1>
+                    <div class="details-box">
+                        <a href="https://play.google.com/store/apps/details?id=com.prodikl.septatrack" target="_blank">                            <img src="/site-images/septa.jpg"/><br/>                          </a>                          <a class="button"  href="https://play.google.com/store/apps/details?id=com.prodikl.septatrack"
+                                                                                                                                                                                                                                                      target="_blank">Visit Site</a>                        <a class="button"  href="/tracksepta" class="visit-site"
+                                                                                                                                                                                                                                                                                                               target="_blank">Privacy Policy</a>                        </div>
+                    <div class="tags"><i class="fab fa-android"></i></div>                    </div>
+            </div>
+        </div>
+    </section>
+    <section class="type">
+        <h1>Portfolio</h1>
+        <div class="items">
+            <div class="item">
+                <div class="details">
+                    <h1>Portfolio</h1>
+                    <div class="details-box">
+                        <p>My portfolio of web and software development.</p>
+                        <a class="button" href="portfolio">VIEW PORTFOLIO</a>
+                    </div>
+                    <div class="tags">My portfolio</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="type">
+        <h1>Contact</h1>
+        <ul>
+            <li>Email: <a href="mailto:prodikl.onzkr@simplelogin.com">prodikl.onzkr@simplelogin.com</a></li>
+        </ul>
+    </section>
+</div>
+</body>
+</html>
