@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prodikl - Portfolio</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,900,200|Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link href="/style.css" type="text/css" rel="stylesheet" />
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/b443db8118.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var $active = null;
+
+        $(document).ready(function(){
+            $(".item").click(function(e){
+                if($(e.target).is("a") || $(e.target).is("img")){
+                    return;
+                }
+                $active = $(this).find('.details');
+                $active.toggleClass("open");
+
+                if($active.hasClass("open")){
+                    $("#shade").show();
+                } else {
+                    $("#shade").hide();
+                    $active = null;
+                }
+            });
+            $("#shade").click(function(){
+                $active.toggleClass("open");
+                $active = null;
+                $("#shade").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="shade"></div>
+<section id="top" class="center">
+    <h3><a href="/">PRODIKL</a></h3>
+</section>
+<section class="type">
+    <h1>web development</h1>
+    <div class="items">
+        <div class="item">
+            <div class="details">
+                <h1>The Ryan Center</h1>
+                <div class="details-box">
+                    <a href="http://theryancenter.com/" target="_blank">                        <img src="/site-images/ryan.jpg"/><br/>                      </a>                                            <a class="button" href="http://theryancenter.com/"
+                                                                                                                                                                                                                target="_blank">Visit Site</a>                    </div>
+                <div class="tags">web development</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>Onion Flats</h1>
+                <div class="details-box">
+                    <a href="http://www.onionflats.com/" target="_blank">                        <img src="/site-images/onion.jpg"/><br/>                      </a>                                            <a class="button" href="http://www.onionflats.com/"
+                                                                                                                                                                                                                  target="_blank">Visit Site</a>                    </div>
+                <div class="tags">web development</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>Liacouras Center</h1>
+                <div class="details-box">
+                    <a href="http://liacourascenter.com/" target="_blank">                        <img src="/site-images/lia.jpg"/><br/>                      </a>                                            <a class="button" href="http://liacourascenter.com/"
+                                                                                                                                                                                                                 target="_blank">Visit Site</a>                    </div>
+                <div class="tags">web development</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>Annamaet Petfoods</h1>
+                <div class="details-box">
+                    <a href="http://annamaet.com/" target="_blank">                        <img src="/site-images/annamaet.jpg"/><br/>                      </a>                                            <a class="button" href="http://annamaet.com/"
+                                                                                                                                                                                                               target="_blank">Visit Site</a>                    </div>
+                <div class="tags">web development</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>Title Alliance</h1>
+                <div class="details-box">
+                    </a>                                            <a class="button" href="http://www.titlealliance.com"
+                                                                       target="_blank">Visit Site</a>                    </div>
+                <div class="tags">web development</div>                </div>
+        </div>
+    </div>
+</section>
+<section class="type">
+    <h1>mobile development</h1>
+    <div class="items">
+        <div class="item">
+            <div class="details">
+                <h1>Read Korean</h1>
+                <div class="details-box">
+                    <a href="https://play.google.com/store/apps/details?id=air.com.prodikl.ReadKorean" target="_blank">                        <img src="/site-images/readkorean.jpg"/><br/>                      </a>                                            <a class="button" href="https://play.google.com/store/apps/details?id=air.com.prodikl.ReadKorean"
+                                                                                                                                                                                                                                                                     target="_blank">Visit Site</a>                    </div>
+                <div class="tags">actionscript, android</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>Read Chinese</h1>
+                <div class="details-box">
+                    <a href="https://play.google.com/store/apps/details?id=com.prodikl.readchinese" target="_blank">                        <img src="/site-images/readchinese.jpg"/><br/>                      </a>                                            <a class="button" href="https://play.google.com/store/apps/details?id=com.prodikl.readchinese"
+                                                                                                                                                                                                                                                                   target="_blank">Visit Site</a>                    </div>
+                <div class="tags">android, java</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>Investor</h1>
+                <div class="details-box">
+                    <a href="https://play.google.com/store/apps/details?id=com.prodikl.investor" target="_blank">                        <img src="/site-images/investor.jpg"/><br/>                      </a>                                            <a class="button" href="https://play.google.com/store/apps/details?id=com.prodikl.investor"
+                                                                                                                                                                                                                                                             target="_blank">Visit Site</a>                    </div>
+                <div class="tags">android, java</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>Track SEPTA</h1>
+                <div class="details-box">
+                    <a href="https://play.google.com/store/apps/details?id=com.prodikl.septatrack" target="_blank">                        <img src="/site-images/septa.jpg"/><br/>                      </a>                                            <a class="button" href="https://play.google.com/store/apps/details?id=com.prodikl.septatrack"
+                                                                                                                                                                                                                                                            target="_blank">Visit Site</a>                    </div>
+                <div class="tags">android, java</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>Vocabop Tale Spinner</h1>
+                <div class="details-box">
+                    <a href="https://play.google.com/store/apps/details?id=air.com.chaseedu.taleSpinner" target="_blank">                        <img src="/site-images/spinner.jpg"/><br/>                      </a>                                            <a class="button" href="https://play.google.com/store/apps/details?id=air.com.chaseedu.taleSpinner"
+                                                                                                                                                                                                                                                                    target="_blank">Visit Site</a>                    </div>
+                <div class="tags">actionscript, android, ios, starling</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>Vocabop Tale Crafter</h1>
+                <div class="details-box">
+                    <a href="https://play.google.com/store/apps/details?id=air.com.chaseedu.taleCrafter" target="_blank">                        <img src="/site-images/crafter.jpg"/><br/>                      </a>                                            <a class="button" href="https://play.google.com/store/apps/details?id=air.com.chaseedu.taleCrafter"
+                                                                                                                                                                                                                                                                    target="_blank">Visit Site</a>                    </div>
+                <div class="tags">actionscript, android, ios, starling</div>                </div>
+        </div>
+    </div>
+</section>
+<section class="type">
+    <h1>personal interests</h1>
+    <div class="items">
+        <div class="item">
+            <div class="details">
+                <h1>cars</h1>
+                <div class="details-box">
+                    <div class="desc">My first car was a manual 1997 Civic HX that made 40MPG. I'm currently driving a manual 2015 Mazda 6 (the third Mazda 6 in the family, now).</div>                                          </div>
+                <div class="tags">I'll take a 6-speed, please</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>computers</h1>
+                <div class="details-box">
+                    <div class="desc">An SSD and getting a good amount of ram is always worth it. Those two can bottleneck even a $500 CPU. Personally, I'm a windows guy; the ability to swap in and out hardware, cpus, motherboards, and gpus freely, and at market price, is must.</div>                                          </div>
+                <div class="tags">Intel, NVidia, SSDs, and 16gb of RAM</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>android</h1>
+                <div class="details-box">
+                    <div class="desc">Went from the OG Galaxy S1, then picked up the Galaxy Nexus, now I'm on a Nexus 5.</div>                                          </div>
+                <div class="tags">Nexus or Bust</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>YNAB</h1>
+                <div class="details-box">
+                    </a>                      <div class="desc">I have no idea how I made it as far as I did without budgeting. Seriously life-changing stuff.</div>                      <a class="button" href="http://www.youneedabudget.com/"
+                                                                                                                                                                                             target="_blank">Visit Site</a>                    </div>
+                <div class="tags">You need a budget</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>motorcycles</h1>
+                <div class="details-box">
+                    <div class="desc">I rode a little 125 when I lived in Seoul, South Korea.</div>                                          </div>
+                <div class="tags">1 Down, 5 Up</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>violin</h1>
+                <div class="details-box">
+                    <div class="desc">I have an acoustic and an electric. Classical is great, but I'm working on bluegrass and gypsy style these days.</div>                                          </div>
+                <div class="tags">Saint-Saens: Bacchanale</div>                </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h1>guitars</h1>
+                <div class="details-box">
+                    <div class="desc">I know most of my chords and am just starting riffs. I live in my father's shadow.</div>                                          </div>
+                <div class="tags">I'm a Fender guy</div>                </div>
+        </div>
+    </div>
+</section>
+
+<section class="type">
+    <h1>Contact</h1>
+    <ul>
+        <li>Email: <a href="mailto:prodikl.onzkr@simplelogin.com">prodikl.onzkr@simplelogin.com</a></li>
+    </ul>
+</section>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prodikl - Software</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,900,200|Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link href="/style.css" type="text/css" rel="stylesheet" />
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/b443db8118.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var $active = null;
+
+        $(document).ready(function(){
+            $(".item").click(function(e){
+                if($(e.target).is("a") || $(e.target).is("img")){
+                    return;
+                }
+                $active = $(this).find('.details');
+                $active.toggleClass("open");
+
+                if($active.hasClass("open")){
+                    $("#shade").show();
+                } else {
+                    $("#shade").hide();
+                    $active = null;
+                }
+            });
+            $("#shade").click(function(){
+                $active.toggleClass("open");
+                $active = null;
+                $("#shade").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="shade"></div>
+<section id="top" class="center">
+    <h3><a href="/">PRODIKL</a></h3>
+    <h1>SUBTITLE SCANNER</h1>
+    <p>
+        Organize your subtitle files and automatically rename them to match your video files.
+    </p>
+    <img src="images/sub1.jpg" />
+    <p>
+        With a file structure like this:
+    </p>
+    <ul class="medium-list">
+        <li><span class="directory">TV-Show.S01E01.etc/</span><span class="subtitle-file">subtitle.srt</span></li>
+        <li><span class="directory">TV-Show.S01E02.etc/</span><span class="subtitle-file">subtitle.srt</span></li>
+        <li><span class="directory">TV-Show.S01E03.etc/</span><span class="subtitle-file">subtitle.srt</span></li>
+        <li class="video-file">TV-Show.S01E01.avi</li>
+        <li class="video-file">TV-Show.S01E02.avi</li>
+        <li class="video-file">TV-Show.S01E03.avi</li>
+    </ul>
+    <p>
+        This software will organize it to look like this:
+    </p>
+    <ul class="medium-list">
+        <li><span class="directory">TV-Show.S01E01.etc/</span><span class="subtitle-file">subtitle.srt</span></li>
+        <li><span class="directory">TV-Show.S01E02.etc/</span><span class="subtitle-file">subtitle.srt</span></li>
+        <li><span class="directory">TV-Show.S01E03.etc/</span><span class="subtitle-file">subtitle.srt</span></li>
+        <li class="video-file">TV-Show.S01E01.avi</li>
+        <li class="subtitle-file">TV-Show.S01E01.srt</li>
+        <li class="video-file">TV-Show.S01E02.avi</li>
+        <li class="subtitle-file">TV-Show.S01E02.srt</li>
+        <li class="video-file">TV-Show.S01E03.avi</li>
+        <li class="subtitle-file">TV-Show.S01E03.srt</li>
+    </ul>
+    <p>
+        This software automatically matches video files with their subtitle directories by looking at the "S01E01" phrase.
+    </p>
+    <p>
+        Then copies the first subtitle it finds in matching directories and renames it to match the video file.
+    </p>
+    <a class="button" href="files/SubtitleScanner.msi">Download v1.0 beta</a>
+    <i class="disclaimer">This software is offered freely as-is for personal use, and by downloading and/or using this software
+        you understand that the author takes no responsibility for loss of data or otherwise unexpected results. <br />
+        This software may or may not be updated and maintained in the future and the author has no obligation to do so. <br />
+        You may not re-sell this software.
+    </i>
+</section>
+
+<section class="type">
+    <h1>Contact</h1>
+    <ul>
+        <li>Email: <a href="mailto:prodikl.onzkr@simplelogin.com">prodikl.onzkr@simplelogin.com</a></li>
+    </ul>
+</section>
+</div>
+</body>
+</html>
