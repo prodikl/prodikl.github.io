@@ -82,6 +82,10 @@ body {
     margin: 10px;
     padding:0;
     min-height:92px;
+    position: relative;
+}
+.item:hover {
+    z-index: 10;
 }
 .details {
     background:white;
@@ -89,11 +93,12 @@ body {
     padding: 20px 0px;
     cursor: pointer;
 }
-.details:hover {
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
-}
+.item:hover .details,
 .details.open {
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
     padding-bottom: 20px;
     box-shadow: 0px 0px 30px rgba(0,0,0,0.70);
     overflow: hidden;
@@ -110,6 +115,7 @@ hr.top-hr {
 .details > div.details-box {
     display:none;
 }
+.item:hover .details > div.details-box,
 .details.open > div.details-box {
     display:block;
     margin: 10px 0px;
@@ -122,6 +128,7 @@ hr.top-hr {
     }
     .details-box > a > img {
         border: solid 5px gainsboro;
+        max-width: 400px;
     }
     .details-box > a:hover {
         text-decoration: underline;
